@@ -1,0 +1,71 @@
+using System;
+
+namespace DayOfWeek
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double Degrees = double.Parse(Console.ReadLine());
+            string DayTime = Console.ReadLine();
+            string Outfit = "";
+            string Shoes = "";
+
+            if (Degrees >= 10 && Degrees <= 18)
+            {
+                if (DayTime == "Morning")
+                {
+                    Outfit = "Sweatshirt";
+                    Shoes = "Sneakers";
+                }
+                else if (DayTime == "Afternoon")
+                {
+                    Outfit = "Shirt";
+                    Shoes = "Moccasins";
+                }
+                else if (DayTime == "Evening")
+                {
+                    Outfit = "Shirt";
+                    Shoes = "Moccasins";
+                }
+            }
+            else if (Degrees > 18 && Degrees <= 24)
+            {
+                if (DayTime == "Morning")
+                {
+                    Outfit = "Shirt";
+                    Shoes = "Moccasins";
+                }
+                else if (DayTime == "Afternoon")
+                {
+                    Outfit = "T-Shirt";
+                    Shoes = "Sandals";
+                }
+                else if (DayTime == "Evening")
+                {
+                    Outfit = "Shirt";
+                    Shoes = "Moccasins";
+                }
+            }
+            else if (Degrees >= 25)
+            {
+                if (DayTime == "Morning")
+                {
+                    Outfit = "T-Shirt";
+                    Shoes = "Sandals";
+                }
+                else if (DayTime == "Afternoon")
+                {
+                    Outfit = "Swim Suit";
+                    Shoes = "Barefoot";
+                }
+                else if (DayTime == "Evening")
+                {
+                    Outfit = "Shirt";
+                    Shoes = "Moccasins";
+                }
+            }
+            Console.WriteLine($"It's {Degrees} degrees, get your {Outfit} and {Shoes}.");
+        }
+    }
+}
